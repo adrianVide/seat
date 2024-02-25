@@ -253,7 +253,7 @@ html {
   padding: 16px;
   background-color: #ffffff;
   border-radius: 16px;
-  padding-bottom: 64px;
+  padding-bottom: 36px;
   box-shadow: 0px 25px 50px 0px #16194F0D;
 }
 @media (min-width: 768px) {
@@ -261,7 +261,7 @@ html {
     padding: 32px;
     background-color: #ffffff;
     border-radius: 32px;
-    padding-bottom: 64px;
+    padding-bottom: 48px;
   }
 }
 #covidChart tbody tr {
@@ -296,6 +296,9 @@ html {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.chat {
+  margin-top: 64px;
 }
 .message {
   display: grid;
@@ -360,6 +363,10 @@ html {
   }
 }
 #plans .plan {
+  flex: 0 0 auto;
+  width: calc(80%);
+  /* Initially, each card takes up the full width */
+  margin-right: 20px;
   box-shadow: 0px 25px 50px 0px #16194F0D;
   padding: 16px;
   background-color: #ffffff;
@@ -370,6 +377,8 @@ html {
     padding: 32px;
     background-color: #ffffff;
     border-radius: 64px;
+    width: calc(30%);
+    /* Each card takes half the width with spacing */
   }
 }
 #plans .plan .plan__name {
@@ -401,6 +410,7 @@ html {
   margin: 40px 0;
 }
 #plans .plan__button {
+  position: relative;
   margin: 40px 0;
 }
 #plans .plan__card {
@@ -477,4 +487,64 @@ html {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.prev .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 2;
+}
+.card {
+  flex: 0 0 auto;
+  width: calc(40%);
+  margin-right: 20px;
+  padding: 20px;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .slider-container {
+    padding: 64px;
+  }
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f2f6ff;
+  color: #f44e77;
+  border: none;
+  cursor: pointer;
+  font-size: 64px;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
 }

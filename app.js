@@ -138,7 +138,7 @@ class Plan extends HTMLElement {
         <div class="plan__name">${name}</div>
         <div class="plan__price">${price}</div>
         <div class="plan__tag">${tag}</div>
-        <button-item  name="Get Started" outlined></button-item>
+        <button-item class="plan__button" name="Get Started" outlined></button-item>
         <img class="plan__card" src="./assets/Credit Card.svg" alt="card" />
         <ul>${featuresHTML}</ul>
         <ul class="plan__features--disabled">${disabledFeaturesHTML}</ul>`;
@@ -259,3 +259,53 @@ class CovidChart extends HTMLElement {
 }
 
 customElements.define('covid-chart', CovidChart);
+
+class CardSlider extends HTMLElement {
+    connectedCallback() {
+      this.innerHTML = `
+
+        <div class="slider-container">
+          <div class="slider">
+          <plan-item class="plan" name="FREE" price="$0/m"
+          tag="Manage your business with a simple and efficient account"
+          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
+          disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+      <plan-item class="plan" name="PREMIUM" price="$8/m"
+          tag="Priority support and multi-user access to maximize your productivity."
+          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+          <plan-item class="plan" name="FREE" price="$0/m"
+          tag="Manage your business with a simple and efficient account"
+          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
+          disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+      <plan-item class="plan" name="PREMIUM" price="$8/m"
+          tag="Priority support and multi-user access to maximize your productivity."
+          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            <!-- Add more cards as needed -->
+          </div>
+          <button class="prev" onclick="this.parentNode.querySelector('.slider').moveSlider(-1)">❮</button>
+          <button class="next" onclick="this.parentNode.querySelector('.slider').moveSlider(1)">❯</button>
+        </div>
+      `;
+      const prevButton = this.querySelector('.prev');
+      const nextButton = this.querySelector('.next');
+      const slider = this.querySelector('.slider');
+
+      let slideIndex = 0;
+
+      function moveSlider(n) {
+        const cards = slider.querySelectorAll('.plan');
+        const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
+        const maxIndex = cards.length - Math.floor(slider.parentElement.offsetWidth / cardWidth);
+
+        slideIndex += n;
+        slideIndex = Math.max(0, Math.min(slideIndex, maxIndex));
+
+        slider.style.transform = `translateX(-${slideIndex * cardWidth}px)`;
+      }
+
+      prevButton.addEventListener('click', () => moveSlider(-1));
+      nextButton.addEventListener('click', () => moveSlider(1));
+    }
+  }
+
+  customElements.define('card-slider', CardSlider);

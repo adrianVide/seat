@@ -429,12 +429,19 @@ html {
     }
 
     .plan {
+        flex: 0 0 auto;
+        width: calc(100% - 20px);
+        /* Initially, each card takes up the full width */
+        margin-right: 20px;
         .shadow();
         .paper-border-radius(32px, 16px);
 
         @media (min-width: 768px) {
             .paper-border-radius(64px, 32px);
+            width: calc(50% - 20px);
+            /* Each card takes half the width with spacing */
         }
+
 
         .plan__name {
             font-size: 40px;
@@ -465,6 +472,7 @@ html {
     }
 
     .plan__button {
+        position: relative;
         margin: 40px 0;
     }
 
@@ -556,3 +564,79 @@ html {
         gap: 32px;
     }
 }
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.prev .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+}
+.card {
+    flex: 0 0 auto;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    padding: 20px;
+}
+
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+
+
+
+
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    @media (min-width: 768px) {
+        padding: 64px
+    }
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: @neutral;
+    color: @primary-accent;
+    border: none;
+    cursor: pointer;
+    font-size: 64px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+

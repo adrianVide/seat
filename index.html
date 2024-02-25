@@ -3,10 +3,12 @@
 
 <head>
     <script src="./app.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <link rel="stylesheet" href="./styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
 
@@ -79,13 +81,7 @@
                 name="An exceptional service, <span class=&quot;title__half&quot;>at the right price.</span>"></h3-text>
             <p-text name="Start with our free plan and switch to premium as you grow"></p-text>
             <div class="plans">
-                <plan-item class="plan" name="FREE" price="$0/m"
-                    tag="Manage your business with a simple and efficient account"
-                    features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
-                    disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-                <plan-item class="plan" name="PREMIUM" price="$8/m"
-                    tag="Priority support and multi-user access to maximize your productivity."
-                    features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+                <card-slider></card-slider>
             </div>
         </section>
         <section id="faq">
