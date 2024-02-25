@@ -4,7 +4,9 @@ class MenuItem extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerHTML = `<a class="menu__item">${this.getAttribute('name')}</a>`;
+        const name = this.getAttribute('name');
+        const link = this.getAttribute('link');
+        this.innerHTML = `<a href=${link} class="menu__item">${name}</a>`;
     }
 }
 
