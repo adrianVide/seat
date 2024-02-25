@@ -179,3 +179,83 @@ class FAQ extends HTMLElement {
 }
 
 customElements.define('faq-item', FAQ);
+
+class CovidChart extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.render();
+        this.fetchData();
+    }
+
+    async fetchData() {
+        try {
+            const response = await fetch('https://api.covidtracking.com/v1/us/daily.json');
+            const data = await response.json();
+            const days = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+            const positiveIncreases = data.slice(0, 7).map(item => item.positiveIncrease);
+            const deathIncreases = data.slice(0, 7).map(item => item.deathIncrease);
+
+            const maxPositiveIncrease = Math.max(...positiveIncreases);
+            const maxDeathIncrease = Math.max(...deathIncreases);
+
+            const rows = this.querySelectorAll('tr');
+
+            for (let i = 1; i < rows.length; i++) {
+                const cells = rows[i].querySelectorAll('td');
+                cells[0].style.setProperty('--size', positiveIncreases[i - 1] / maxPositiveIncrease);
+                cells[1].style.setProperty('--size', deathIncreases[i - 1] / maxDeathIncrease);
+            }
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    }
+
+    render() {
+        this.innerHTML = `
+            <table id="covidChart" class="charts-css column show-labels datasets-spacing-3">
+                <tbody>
+                    <tr>
+                        <th scope="row">MON</th>
+                        <td ></td>
+                        <td ></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">TUE</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">WED</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">THU</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">FRI</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SAT</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SUN</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+    }
+}
+
+customElements.define('covid-chart', CovidChart);

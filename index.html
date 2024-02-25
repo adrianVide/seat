@@ -46,46 +46,7 @@
                     <insight-item class="insights__item" title="Balance" amount="$5,600"></insight-item>
                     <insight-item class="insights__item" title="Last Transaction" amount="$230"></insight-item>
                 </div>
-                <table id="covidChart" class="charts-css column show-labels datasets-spacing-3">
-                    <tbody>
-                        <tr>
-                            <th scope="row">MON</th>
-                            <td style="--size: 0.46" class="positiveIncrease"></td>
-                            <td style="--size: 0.37" class="deathIncrease"> </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">TUE</th>
-                            <td style="--size: 0.5"></td>
-                            <td style="--size: 0.4"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">WED</th>
-                            <td style="--size: 0.6"></td>
-                            <td style="--size: 0.48"></td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">THU</th>
-                            <td style="--size: 0.5"></td>
-                            <td style="--size: 0.4"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">FRI</th>
-                            <td style="--size: 0.6"></td>
-                            <td style="--size: 0.48"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">SAT</th>
-                            <td style="--size: 0.5"></td>
-                            <td style="--size: 0.4"></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">SUN</th>
-                            <td style="--size: 0.6"></td>
-                            <td style="--size: 0.48"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <covid-chart></covid-chart>
             </div>
             <div>
                 <h3-text name="Manage your finances like a pro in no time"></h3-text>
@@ -102,7 +63,7 @@
                 <div>
                     <img src="./assets/Profile Images.svg" alt="logo" />
                     <p-text name="+20"></p-text>
-            </div>
+                </div>
             </div>
             <div class="chat">
                 <message-item class="message" text="Hi Mike, How can I help you?" name="Clair" time="12:22 pm"
