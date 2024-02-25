@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <section id="header" class="layout">
+            <img src="./assets/Logo.svg" alt="logo" />
+            <div class="menu">
+                <menu-item name="Home"></menu-item>
+                <menu-item name="Features"></menu-item>
+                <menu-item name="Pricing"></menu-item>
+            </div>
+            <button-item bgAccent name="Sign Up" /></button-item>
+        </section>
+        <section id="hero" class="layout">
+            <div class="hero__left">
+                <h1-text name="Smart Banking for freelancers"></h1-text>
+                <p-text
+                    name="Draft is a revolutionary mobile app built to help you manage your business easily and save your money."></p-text>
+                <button-item arrow name="Register Now" /></button-item>
+            </div>
+            <div>
+                <img src="./assets/Phone.svg" alt="Phone" />
+            </div>
+        </section>
+        <section id='card' class="layout">
+            <div>
+                <h3-text name="One card for all your payments"></h3-text>
+                <p-text
+                    name="Get 3% back on everything you buy with the Draft card. Register today and enjoy every aspect of your business. "></p-text>
+            </div>
+            <img src="./assets/Credit Card.svg" alt="card" />
+        </section>
+        <section id="finances" class="layout">
+            <div class="layout__left">
+                <div class="insights">
+                    <insight-item class="insights__item" title="Balance" amount="$5,600"></insight-item>
+                    <insight-item class="insights__item" title="Last Transaction" amount="$230"></insight-item>
+                </div>
+                <table id="covidChart" class="charts-css column show-labels datasets-spacing-3">
+                    <tbody>
+                        <tr>
+                            <th scope="row">MON</th>
+                            <td style="--size: 0.46" class="positiveIncrease"></td>
+                            <td style="--size: 0.37" class="deathIncrease"> </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">TUE</th>
+                            <td style="--size: 0.5"></td>
+                            <td style="--size: 0.4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">WED</th>
+                            <td style="--size: 0.6"></td>
+                            <td style="--size: 0.48"></td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">THU</th>
+                            <td style="--size: 0.5"></td>
+                            <td style="--size: 0.4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">FRI</th>
+                            <td style="--size: 0.6"></td>
+                            <td style="--size: 0.48"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SAT</th>
+                            <td style="--size: 0.5"></td>
+                            <td style="--size: 0.4"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SUN</th>
+                            <td style="--size: 0.6"></td>
+                            <td style="--size: 0.48"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <h3-text name="Manage your finances like a pro in no time"></h3-text>
+                <p-text
+                    name="With Draft, book keeping, banking, and invoices are all in one place. You will always know where you stand."></p-text>
+                <button-item arrow name="Learn More" /></button-item>
+            </div>
+        </section>
+        <section id="support" class="layout">
+            <div class="layout__left">
+                <h3-text name="We support you in 5 different languages"></h3-text>
+                <p-text
+                    name="Our support team in here to help you in 5 languages - English, French, Spanish,Polish and German."></p-text>
+                <div>
+                    <img src="./assets/Profile Images.svg" alt="logo" />
+                    <p-text name="+20"></p-text>
+                </div>
+            </div>
+            <div class="chat">
+                <message-item class="message" text="Hi Mike, How can I help you?" name="Clair" time="12:22 pm"
+                    avatar="./assets/Ellipse 20.jpg"></message-item>
+                <message-item class="message message__user" text="My credit card is stolen..." name="Mike"
+                    time="12:24 pm" avatar="./assets/Ellipse 21.jpg" isUser></message-item>
+                <message-item class="message" text="Ok. No problem. We will take care of this." name="Clair"
+                    time="12:25 pm" avatar="./assets/Ellipse 20.jpg"></message-item>
+            </div>
+        </section>
+        <section id="plans">
+            <h3-text
+                name="An exceptional service, <span class=&quot;title__half&quot;>at the right price.</span>"></h3-text>
+            <p-text name="Start with our free plan and switch to premium as you grow"></p-text>
+            <div class="plans">
+                <plan-item class="plan" name="FREE" price="$0/m"
+                    tag="Manage your business with a simple and efficient account"
+                    features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
+                    disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+                <plan-item class="plan" name="PREMIUM" price="$8/m"
+                    tag="Priority support and multi-user access to maximize your productivity."
+                    features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            </div>
+        </section>
+        <section id="faq">
+            <head-tag-item firstHalf="Frequently" secondHalf=" asked questions"
+                tag="If you are not sure whether Draft is suitable is for you or not, do not worry. We are here to explain everything you might want to know"></head-tag-item>
+            <faq-item summary="What is the difference between Draft and a traditional bank account?"
+                details="Draft offers a modern approach, blending banking with budgeting and early paycheck access, while traditional bank accounts mainly handle transactions and fund storage."></faq-item>
+            <faq-item summary="Who can open a Draft account?" details="Anyone elligible"></faq-item>
+            <faq-item summary="What if I withdraw money abroad?"
+                details="Withdrawals abroad from a Draft account may incur foreign transaction fees, depending on the terms of your specific account and the policies of the countries involved."></faq-item>
+            <faq-item summary="Can I cancel my subscrption or switch to another plan anytime?"
+                details="Yes, you can cancel your subscription or switch to another plan at any time with Draft, providing flexibility to adapt to your changing financial needs."></faq-item>
+            <faq-item summary="What happens if I withdraw more than $250?"
+                details="If you withdraw more than $250 from your Draft account, it may trigger additional security measures or require further verification to ensure the transaction's legitimacy and protect against potential fraud."></faq-item>
+        </section>
+    </div>
+    <section id="footer">
+        <div class="wrapper flex">
+            <div class="">
+                <img src="./assets/Logo.svg" alt="logo" />
+                <div>
+                    Copyright © 2020 Draft LLC.
+                </div>
+                <div>
+                    All rights reserved.
+                </div>
+            </div>
+            <div class="footer__grid">
+                <div>Team</div>
+                <div>Press</div>
+                <div>Fees</div>
+                <div>Services</div>
+                <div>Projects</div>
+                <div>Affiliate</div>
+                <div>Terms of use</div>
+                <div>Privacy policy</div>
+                <div>Contact us</div>
+            </div>
+        </div>
+</body>
+
+</html>
