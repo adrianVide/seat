@@ -487,10 +487,6 @@ button img {
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
-.slider-container {
-  position: relative;
-  overflow: hidden;
-}
 .slider {
   display: flex;
   transition: transform 0.5s ease;
