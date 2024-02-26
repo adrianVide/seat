@@ -266,21 +266,23 @@ class PlanSlider extends HTMLElement {
 
         <div class="slider-container">
           <div class="slider">
-          <plan-item class="plan" name="FREE" price="$0/m"
-          tag="Manage your business with a simple and efficient account"
-          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
-          disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-      <plan-item class="plan" name="PREMIUM" price="$8/m"
-          tag="Priority support and multi-user access to maximize your productivity."
-          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-          <plan-item class="plan" name="FREE" price="$0/m"
-          tag="Manage your business with a simple and efficient account"
-          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
-          disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-      <plan-item class="plan" name="PREMIUM" price="$8/m"
-          tag="Priority support and multi-user access to maximize your productivity."
-          features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-            <!-- Add more cards as needed -->
+            <plan-item class="plan" name="FREE" price="$0/m"
+                tag="Manage your business with a simple and efficient account"
+                features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
+                disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            <plan-item class="plan" name="PREMIUM" price="$8/m"
+                tag="Priority support and multi-user access to maximize your productivity."
+                features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            <plan-item class="plan" name="PRO" price="$0/m"
+                tag="Even better support and added functionality for teams."
+                features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
+                disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            <plan-item class="plan" name="SUPER PRO" price="$8/m"
+                tag="Even better, can you believe it?."
+                features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
+            <plan-item class="plan" name="ENTERPRISE" price="$8/m"
+                tag="You are not supposed to get here."
+                features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
           </div>
           <button class="prev" onclick="this.parentNode.querySelector('.slider').moveSlider(-1)">❮</button>
           <button class="next" onclick="this.parentNode.querySelector('.slider').moveSlider(1)">❯</button>
