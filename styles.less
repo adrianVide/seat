@@ -105,7 +105,9 @@ html {
     gap: 16px;
 }
 
-.button {
+button {
+    display: flex;
+    align-items: center;
     padding: 16px 32px;
     border-radius: 16px;
     border: none;
@@ -138,6 +140,9 @@ html {
             color: @primary-accent;
             border: 1px solid @primary-accent;
         }
+    }
+    img {
+        margin-left: 8px;
     }
 }
 
@@ -201,7 +206,7 @@ html {
             text-align: center;
             color: @secondary-light;
             cursor: pointer;
-            
+
             @media (min-width: 768px) {
                 color: @neutral;
                 padding: 8px 16px;
@@ -223,7 +228,9 @@ html {
 }
 
 #hero {
-    h1, p {
+
+    h1,
+    p {
         @media (min-width: 768px) {
             color: @neutral;
         }
@@ -443,7 +450,6 @@ html {
     .plan {
         flex: 0 0 auto;
         width: calc(100% - 20px);
-        /* Initially, each card takes up the full width */
         margin-right: 20px;
         .shadow();
         .paper-border-radius(32px, 16px);
@@ -451,7 +457,6 @@ html {
         @media (min-width: 768px) {
             .paper-border-radius(64px, 32px);
             width: calc(50% - 20px);
-            /* Each card takes half the width with spacing */
         }
 
 
@@ -470,7 +475,7 @@ html {
         }
 
         button {
-            margin: 20px 0 40px 0;
+            margin: 30px auto;
         }
     }
 
@@ -635,7 +640,7 @@ html {
     transform: translateY(-50%);
     background-color: @neutral;
     color: @primary-accent;
-    border: none;
+    border-radius: unset;
     cursor: pointer;
     font-size: 64px;
 }
@@ -650,9 +655,11 @@ html {
 
 .bg-image {
     display: none;
+
     @media (min-width: 768px) {
         display: block;
     }
+
     position: absolute;
     top: 0;
     left: 0;
@@ -667,9 +674,11 @@ html {
 
 .bg-wave {
     display: none;
+
     @media (min-width: 768px) {
         display: block;
     }
+
     position: absolute;
     bottom: 0;
     left: 0;

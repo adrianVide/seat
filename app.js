@@ -11,11 +11,11 @@ customElements.define('menu-item', MenuItem);
 class Button extends HTMLElement {
     connectedCallback() {
         const name = this.getAttribute('name');
-        const arrow = this.hasAttribute('arrow') ? ' -->' : '';
+        const arrow = this.hasAttribute('arrow') ? '<img src="./assets/Arrow-Right.svg">' : '';
         const bgAccent = this.hasAttribute('bgAccent');
         const outlined = this.hasAttribute('outlined');
         const classString = `${bgAccent ? ' button--bgaccent' : ''}${outlined ? ' button--outlined' : ''}`;
-        this.innerHTML = `<button class="button${classString}">${name}${arrow}</button>`;
+        this.innerHTML = `<button class="button${classString}">${name} ${arrow}</button>`;
     }
 }
 
