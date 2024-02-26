@@ -642,7 +642,9 @@ button {
     color: @primary-accent;
     border-radius: unset;
     cursor: pointer;
-    font-size: 64px;
+    @media (min-width: 768px) {
+        font-size: 64px;
+    }
 }
 
 .prev {

@@ -539,7 +539,12 @@ button img {
   color: #f44e77;
   border-radius: unset;
   cursor: pointer;
-  font-size: 64px;
+}
+@media (min-width: 768px) {
+  .prev,
+  .next {
+    font-size: 64px;
+  }
 }
 .prev {
   left: 0;
