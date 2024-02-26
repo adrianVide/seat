@@ -1,5 +1,10 @@
 # README
 
+## Notes
+
+ - **Figma:** I had no access to the dev version of the Figma design, so some paddings, margins, and other measures might not be accurate. If there is a need for this be exact, I need a different permission to the file.
+- **GitHub Pages:** It is running on [GitHub Pages](https://adrianvide.github.io/seat/) but for some reason there are couple of issues with the CSS there. I hadn't tested it on a real server, but works fine locally.
+
 ## Description
 
 This repository contains an HTML document along with associated CSS and JavaScript files. The HTML document represents a webpage for a banking application designed for freelancers. It includes sections for the header, hero, card details, financial insights, support, pricing plans, FAQs, and footer.
@@ -7,8 +12,6 @@ This repository contains an HTML document along with associated CSS and JavaScri
 ## Usage
 
 To use this webpage, simply open the HTML file (`index.html`) in a web browser. The associated CSS file (`styles.css`) provides styling for the webpage, while the JavaScript file (`app.js`) adds interactivity and dynamic functionality.
-
-It is running on [GitHub Pages](https://adrianvide.github.io/seat/) too but for some reason there are couple of issues with the CSS there. I hadn't tested it on a real server, but works fine locally.
 
 ## HTML Structure
 
