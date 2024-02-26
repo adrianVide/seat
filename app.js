@@ -1,8 +1,4 @@
 class MenuItem extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         const name = this.getAttribute('name');
         const link = this.getAttribute('link');
@@ -13,9 +9,6 @@ class MenuItem extends HTMLElement {
 customElements.define('menu-item', MenuItem);
 
 class Button extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
         const arrow = this.hasAttribute('arrow') ? ' -->' : '';
@@ -29,9 +22,6 @@ class Button extends HTMLElement {
 customElements.define('button-item', Button);
 
 class H1 extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
 
@@ -42,9 +32,6 @@ class H1 extends HTMLElement {
 customElements.define('h1-text', H1);
 
 class H2 extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
 
@@ -55,9 +42,6 @@ class H2 extends HTMLElement {
 customElements.define('h2-text', H2);
 
 class H3 extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
 
@@ -68,9 +52,6 @@ class H3 extends HTMLElement {
 customElements.define('h3-text', H3);
 
 class Paragraph extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
 
@@ -82,9 +63,6 @@ customElements.define('p-text', Paragraph);
 
 
 class Insight extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const title = this.getAttribute('title');
         const amount = this.getAttribute('amount');
@@ -98,9 +76,6 @@ class Insight extends HTMLElement {
 customElements.define('insight-item', Insight);
 
 class Message extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const text = this.getAttribute('text');
         const name = this.getAttribute('name');
@@ -122,9 +97,6 @@ customElements.define('message-item', Message);
 
 
 class Plan extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const name = this.getAttribute('name');
         const tag = this.getAttribute('tag');
@@ -148,14 +120,10 @@ class Plan extends HTMLElement {
 customElements.define('plan-item', Plan);
 
 class HeadTag extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const firstHalf = this.getAttribute('firstHalf');
         const secondHalf = this.getAttribute('secondHalf');
         const tag = this.getAttribute('tag');
-
 
         this.innerHTML = `<div class="head-tag">
         <h3-text name="${firstHalf}<span class=&quot;title__half&quot;>${secondHalf}</span>"></h3-text>
@@ -166,9 +134,6 @@ class HeadTag extends HTMLElement {
 customElements.define('head-tag-item', HeadTag);
 
 class FAQ extends HTMLElement {
-    constructor() {
-        super();
-    }
     connectedCallback() {
         const summary = this.getAttribute('summary');
         const details = this.getAttribute('details');
@@ -181,10 +146,6 @@ class FAQ extends HTMLElement {
 customElements.define('faq-item', FAQ);
 
 class CovidChart extends HTMLElement {
-    constructor() {
-        super();
-    }
-
     connectedCallback() {
         this.render();
         this.fetchData();
