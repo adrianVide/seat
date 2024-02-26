@@ -260,7 +260,7 @@ class CovidChart extends HTMLElement {
 
 customElements.define('covid-chart', CovidChart);
 
-class CardSlider extends HTMLElement {
+class PlanSlider extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
 
@@ -293,14 +293,14 @@ class CardSlider extends HTMLElement {
       let slideIndex = 0;
 
       function moveSlider(n) {
-        const cards = slider.querySelectorAll('.plan');
-        const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginRight);
-        const maxIndex = cards.length - Math.floor(slider.parentElement.offsetWidth / cardWidth);
+        const plans = slider.querySelectorAll('.plan');
+        const planWidth = plans[0].offsetWidth + parseInt(getComputedStyle(plans[0]).marginRight);
+        const maxIndex = plans.length - Math.floor(slider.parentElement.offsetWidth / planWidth);
 
         slideIndex += n;
         slideIndex = Math.max(0, Math.min(slideIndex, maxIndex));
 
-        slider.style.transform = `translateX(-${slideIndex * cardWidth}px)`;
+        slider.style.transform = `translateX(-${slideIndex * planWidth}px)`;
       }
 
       prevButton.addEventListener('click', () => moveSlider(-1));
@@ -308,4 +308,4 @@ class CardSlider extends HTMLElement {
     }
   }
 
-  customElements.define('card-slider', CardSlider);
+  customElements.define('plan-slider', PlanSlider);
