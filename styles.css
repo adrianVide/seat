@@ -157,6 +157,7 @@ html {
 }
 @media (min-width: 768px) {
   #header .menu .menu__item {
+    color: #f2f6ff;
     padding: 8px 16px;
   }
 }
@@ -169,6 +170,12 @@ html {
 @media (min-width: 768px) {
   #header button {
     display: block;
+  }
+}
+@media (min-width: 768px) {
+  #hero h1,
+  #hero p {
+    color: #f2f6ff;
   }
 }
 @media (min-width: 768px) {
@@ -547,4 +554,47 @@ html {
 }
 .next {
   right: 0;
+}
+.bg-image {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  line-height: 0;
+  background-image: url(assets/background.png);
+  height: 97%;
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .bg-image {
+    display: block;
+  }
+}
+.bg-wave {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+@media (min-width: 768px) {
+  .bg-wave {
+    display: block;
+  }
+}
+.bg-wave svg {
+  position: relative;
+  display: block;
+  width: calc(166.3%);
+  height: 491px;
+  transform: rotateY(180deg);
+}
+.bg-wave .shape-fill {
+  fill: #f2f6ff;
 }

@@ -67,6 +67,10 @@ body {
     text-align: left;
     background-color: @neutral;
     color: @secondary-light;
+    // background-image: url("./assets/BG.png");
+    // background-repeat: no-repeat;
+    // background-size: contain;
+    // backdrop-filter: blur(10px);
 }
 
 html {
@@ -79,6 +83,7 @@ html {
     padding: @padding;
     background-color: @white;
     border-radius: @radius;
+
 }
 
 .caption {
@@ -196,8 +201,9 @@ html {
             text-align: center;
             color: @secondary-light;
             cursor: pointer;
-
+            
             @media (min-width: 768px) {
+                color: @neutral;
                 padding: 8px 16px;
             }
 
@@ -217,6 +223,12 @@ html {
 }
 
 #hero {
+    h1, p {
+        @media (min-width: 768px) {
+            color: @neutral;
+        }
+    }
+
     @media (min-width: 768px) {
         margin-top: 80px;
     }
@@ -585,6 +597,7 @@ html {
     font-size: 24px;
     z-index: 2;
 }
+
 .card {
     flex: 0 0 auto;
     width: calc(50% - 10px);
@@ -604,6 +617,7 @@ html {
 .slider-container {
     position: relative;
     overflow: hidden;
+
     @media (min-width: 768px) {
         padding: 64px
     }
@@ -614,7 +628,8 @@ html {
     transition: transform 0.5s ease;
 }
 
-.prev, .next{
+.prev,
+.next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -633,3 +648,45 @@ html {
     right: 0;
 }
 
+.bg-image {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110%;
+    line-height: 0;
+    background-image: url(./assets/background.png);
+    height: 97%;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.bg-wave {
+    display: none;
+    @media (min-width: 768px) {
+        display: block;
+    }
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1;
+}
+
+.bg-wave svg {
+    position: relative;
+    display: block;
+    width: calc(165% + 1.3px);
+    height: 491px;
+    transform: rotateY(180deg);
+}
+
+.bg-wave .shape-fill {
+    fill: @neutral;
+}
