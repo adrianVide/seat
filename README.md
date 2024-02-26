@@ -42,7 +42,7 @@ Several custom HTML elements are defined in the JavaScript file (`app.js`), incl
 
 ## CSS Styles
 
-The CSS file (`styles.css`) provides styling for various elements of the webpage, including:
+The CSS file (`styles.css`) provides styling for various elements of the webpage for mobile and desktop, including:
 
 - Color scheme
 - Typography
@@ -54,6 +54,5 @@ The CSS file (`styles.css`) provides styling for various elements of the webpage
 
 1. Clone this repository to your local machine.
 2. Open the `index.html` file in a web browser to view the webpage.
-3. Customize the content, styles, and functionality as needed for your project.
 
 
