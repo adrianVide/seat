@@ -52,17 +52,6 @@ body {
 html {
   scroll-behavior: smooth;
 }
-.caption {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #6a6d9e;
-}
-.shadow {
-  box-shadow: 0px 25px 50px 0px #16194F0D;
-}
 .flex {
   display: flex;
   gap: 16px;
@@ -560,7 +549,7 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 110%;
+  width: 100%;
   line-height: 0;
   background-image: url(assets/background.png);
   height: 97%;

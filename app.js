@@ -234,14 +234,14 @@ class PlanSlider extends HTMLElement {
             <plan-item class="plan" name="PREMIUM" price="$8/m"
                 tag="Priority support and multi-user access to maximize your productivity."
                 features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-            <plan-item class="plan" name="PRO" price="$0/m"
+            <plan-item class="plan" name="PRO" price="$10/m"
                 tag="Even better support and added functionality for teams."
                 features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards"]'
                 disabledFeatures='["Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-            <plan-item class="plan" name="SUPER PRO" price="$8/m"
+            <plan-item class="plan" name="SUPER PRO" price="$18/m"
                 tag="Even better, can you believe it?."
                 features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
-            <plan-item class="plan" name="ENTERPRISE" price="$8/m"
+            <plan-item class="plan" name="ENTERPRISE" price="Contact us"
                 tag="You are not supposed to get here."
                 features='["10 free local transfer", "10 free local transfer", "Multi-user access", "Prepaid debit cards", "Virtual cards", "Priority 24/7 support", "Exchange 24 currencies", "Free payment to other Draft accounts"]'></plan-item>
           </div>
