@@ -3,7 +3,7 @@
 ## Notes
 
  - **Figma:** I had no access to the dev version of the Figma design, so some paddings, margins, and other measures might not be accurate. If there is a need for this be exact, I need a different permission to the file.
-- **GitHub Pages:** It is running on [GitHub Pages](https://adrianvide.github.io/seat/) but for some reason there are couple of issues with the CSS there. I hadn't tested it on a real server, but works fine locally.
+- **GitHub Pages:** It is running on [GitHub Pages](https://adrianvide.github.io/seat/) but for some reason there are couple of issues with the CSS there and not displaying the plans. I hadn't tested it on a real server, but works fine locally.
 
 ## Description
 
